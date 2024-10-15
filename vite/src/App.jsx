@@ -4,7 +4,8 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Movies from "./components/Movies";
 import WatchList from "./components/WatchList";
-import { BrowserRouter, Routes,Route } from "react-router-dom";
+import Banner from "./components/Banner";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 function App() {
   return (
     <>
@@ -12,7 +13,13 @@ function App() {
         <Navbar />
 
         <Routes>
-          <Route path="/" element={<Movies />}></Route>
+          <Route path="/" element={
+              <>
+                <Banner />
+                <Movies />
+              </>
+            }
+          ></Route>
           <Route path="/watchlist" element={<WatchList />}></Route>
           {/* the path specified here should be same as the path specified in the Navbar */}
         </Routes>
