@@ -29,7 +29,9 @@ function App() {
     let moviesFromLocalStorage = localStorage.getItem('moviesApp');
     if (moviesFromLocalStorage) {
       setWatchList(JSON.parse(moviesFromLocalStorage));
+      // return
     }
+    // setWatchList(JSON.parse(moviesFromLocalStorage));
   }, []);
   return (
     <>
@@ -44,7 +46,7 @@ function App() {
               </>
             }
           ></Route>
-          <Route path="/watchlist" element={<WatchList watchlist={watchlist}/>}></Route>
+          <Route path="/watchlist" element={<WatchList watchlist={watchlist} setWatchList={setWatchList} handleRemoveFromWatchList={handleRemoveFromWatchList}/>}></Route>
           {/* the path specified here should be same as the path specified in the Navbar */}
         </Routes>
       </BrowserRouter>
