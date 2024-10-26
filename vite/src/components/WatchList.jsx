@@ -43,8 +43,8 @@ function WatchList({watchlist,setWatchList,handleRemoveFromWatchList}) {
           {genreList.map((genre)=>{
                  return( <div onClick={() => handleFilter(genre)}
             className={currGenre === genre
-              ? 'flex justify-center items-center h-[3rem] w-[7rem] bg-red-400 rounded-xl text-white font-bold mx-4'
-              : 'flex justify-center items-center h-[3rem] w-[7rem] bg-gray-400 rounded-xl text-white font-bold mx-4'
+              ? 'flex justify-center items-center h-[3rem] w-[7rem] cursor-pointer bg-red-400 rounded-xl text-white font-bold mx-4'
+              : 'flex justify-center items-center h-[3rem] w-[7rem] cursor-pointer bg-gray-400 rounded-xl text-white font-bold mx-4'
             }>
                  {/* //if given genre is equal to currgenre then red colour or grey */}
                  {genre}</div>
